@@ -1,151 +1,164 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
   <defs>
-    <!-- Background Gradients -->
-    <radialGradient id="bgGlow" cx="50%" cy="45%" r="65%">
-      <stop offset="0%" stop-color="#141c48"/>
-      <stop offset="60%" stop-color="#070a1e"/>
-      <stop offset="100%" stop-color="#02030a"/>
+    <!-- Background Squircle Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#182357"/>
+      <stop offset="45%" stop-color="#0b0f2a"/>
+      <stop offset="85%" stop-color="#040612"/>
+      <stop offset="100%" stop-color="#010207"/>
     </radialGradient>
-    <linearGradient id="bgBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#2a3c8d" stop-opacity="0.6"/>
-      <stop offset="50%" stop-color="#182052" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#4c1d95" stop-opacity="0.4"/>
+
+    <!-- Outer Card Rim Stroke -->
+    <linearGradient id="cardRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.7"/>
+      <stop offset="40%" stop-color="#818cf8" stop-opacity="0.3"/>
+      <stop offset="80%" stop-color="#c084fc" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.2"/>
     </linearGradient>
 
-    <!-- Left Arm Gradient -->
-    <linearGradient id="leftArmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Left Arm Vibrant Cyan-Blue Gradient -->
+    <linearGradient id="vLeftGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="30%" stop-color="#0ea5e9"/>
-      <stop offset="70%" stop-color="#3b82f6"/>
+      <stop offset="25%" stop-color="#0ea5e9"/>
+      <stop offset="65%" stop-color="#3b82f6"/>
       <stop offset="100%" stop-color="#6366f1"/>
     </linearGradient>
 
-    <!-- Right Ribbon Main Gradient -->
-    <linearGradient id="rightRibbonGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+    <!-- Right Ribbon Main Electric Violet Gradient -->
+    <linearGradient id="vRightGrad" x1="0%" y1="100%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#6366f1"/>
-      <stop offset="40%" stop-color="#8b5cf6"/>
-      <stop offset="80%" stop-color="#a855f7"/>
+      <stop offset="35%" stop-color="#8b5cf6"/>
+      <stop offset="70%" stop-color="#a855f7"/>
       <stop offset="100%" stop-color="#c084fc"/>
     </linearGradient>
 
-    <!-- Right Ribbon Fold/Top Wave Gradient -->
-    <linearGradient id="ribbonFoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#d8b4fe"/>
-      <stop offset="50%" stop-color="#a855f7"/>
-      <stop offset="100%" stop-color="#6366f1"/>
+    <!-- Right Ribbon Top Fold / Crest -->
+    <linearGradient id="vFoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e9d5ff"/>
+      <stop offset="40%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
     </linearGradient>
 
     <!-- Inner Ribbon Layer -->
-    <linearGradient id="ribbonInnerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
-      <stop offset="50%" stop-color="#60a5fa" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#8b5cf6"/>
+    <linearGradient id="vInnerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#60a5fa" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.95"/>
     </linearGradient>
 
-    <!-- Left Bracket Gradient -->
-    <linearGradient id="leftBracketGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Left Bracket Cyan Gradient -->
+    <linearGradient id="leftBracket" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#38bdf8"/>
       <stop offset="100%" stop-color="#0284c7"/>
     </linearGradient>
 
-    <!-- Right Bracket Gradient -->
-    <linearGradient id="rightBracketGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Right Bracket Purple Gradient -->
+    <linearGradient id="rightBracket" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#c084fc"/>
-      <stop offset="100%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
     </linearGradient>
 
-    <!-- Sparkle Gradient -->
-    <radialGradient id="sparkleGrad" cx="50%" cy="50%" r="50%">
+    <!-- Sparkle Glow -->
+    <radialGradient id="sparkleCore" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="40%" stop-color="#ede9fe"/>
+      <stop offset="40%" stop-color="#f3e8ff"/>
       <stop offset="80%" stop-color="#c084fc"/>
       <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Glow Filter -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    <!-- Ambient Shadow & Glow Filters -->
+    <filter id="ambientGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="24" result="blur"/>
+    </filter>
+    
+    <filter id="intenseGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur1"/>
+      <feGaussianBlur stdDeviation="14" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
   </defs>
 
-  <!-- Squircle / App Icon Rounded Card -->
-  <rect x="16" y="16" width="480" height="480" rx="120" fill="url(#bgGlow)" stroke="url(#bgBorder)" stroke-width="4"/>
+  <!-- Ambient Outer Glow -->
+  <rect x="20" y="20" width="472" height="472" rx="124" fill="#1e1b4b" filter="url(#ambientGlow)" opacity="0.6"/>
 
-  <!-- Background Ambient Glow Behind V -->
-  <ellipse cx="256" cy="245" rx="140" ry="140" fill="#3b82f6" opacity="0.12" filter="url(#glow)"/>
-  <ellipse cx="280" cy="230" rx="120" ry="120" fill="#8b5cf6" opacity="0.15" filter="url(#glow)"/>
+  <!-- Icon Squircle Container -->
+  <rect x="16" y="16" width="480" height="480" rx="120" fill="url(#bgGlow)" stroke="url(#cardRim)" stroke-width="3.5"/>
+
+  <!-- Glowing Radial Core behind "V" -->
+  <circle cx="256" cy="240" r="130" fill="#3b82f6" opacity="0.18" filter="url(#ambientGlow)"/>
+  <circle cx="280" cy="210" r="110" fill="#a855f7" opacity="0.22" filter="url(#ambientGlow)"/>
 
   <!-- Left Code Bracket < -->
-  <path d="M 132 205 L 86 248 C 81 253 81 259 86 264 L 132 307" 
+  <path d="M 124 198 L 78 244 C 73 249 73 257 78 262 L 124 308" 
         fill="none" 
-        stroke="url(#leftBracketGrad)" 
-        stroke-width="22" 
+        stroke="url(#leftBracket)" 
+        stroke-width="26" 
         stroke-linecap="round" 
         stroke-linejoin="round"
-        filter="drop-shadow(0 0 10px rgba(56,189,248,0.4))" />
+        filter="url(#intenseGlow)"/>
 
   <!-- Right Code Bracket > -->
-  <path d="M 380 205 L 426 248 C 431 253 431 259 426 264 L 380 307" 
+  <path d="M 388 198 L 434 244 C 439 249 439 257 434 262 L 388 308" 
         fill="none" 
-        stroke="url(#rightBracketGrad)" 
-        stroke-width="22" 
+        stroke="url(#rightBracket)" 
+        stroke-width="26" 
         stroke-linecap="round" 
         stroke-linejoin="round"
-        filter="drop-shadow(0 0 10px rgba(168,85,247,0.4))" />
+        filter="url(#intenseGlow)"/>
 
-  <!-- Central 4-Point AI Sparkle Star -->
+  <!-- 4-Point Star Sparkle (✦) in Top Notch -->
   <g transform="translate(268, 142)">
-    <path d="M 0 -28 Q 0 0 28 0 Q 0 0 0 28 Q 0 0 -28 0 Q 0 0 0 -28 Z" 
-          fill="url(#sparkleGrad)"
-          filter="drop-shadow(0 0 12px rgba(237,233,254,0.8))"/>
+    <path d="M 0 -32 Q 0 0 32 0 Q 0 0 0 32 Q 0 0 -32 0 Q 0 0 0 -32 Z" 
+          fill="url(#sparkleCore)"
+          filter="url(#intenseGlow)"/>
   </g>
 
-  <!-- 3D Ribbon "V" Symbol -->
-  <!-- 1. Left Arm of V -->
-  <path d="M 116 102 
-           C 112 102, 108 106, 110 111 
-           L 224 388 
-           C 230 402, 246 411, 261 406 
-           C 272 402, 281 392, 285 382 
-           L 186 106 
-           C 184 103, 180 102, 176 102 
+  <!-- Central 3D Ribbon "V" Symbol -->
+  <!-- 1. Left Diagonal Arm -->
+  <path d="M 112 98 
+           C 107 98 103 103 105 108 
+           L 222 396 
+           C 228 412 248 420 264 414 
+           C 276 409 285 398 289 386 
+           L 185 102 
+           C 183 99 178 98 174 98 
            Z" 
-        fill="url(#leftArmGrad)"
-        filter="drop-shadow(0 4px 20px rgba(14,165,233,0.3))"/>
+        fill="url(#vLeftGrad)"
+        filter="url(#intenseGlow)"/>
 
-  <!-- 2. Inner Fold Translucent Layer -->
-  <path d="M 235 340 
-           L 358 152 
-           C 342 165, 320 200, 290 250 
-           L 242 330 
+  <!-- 2. Inner Fold Translucent Wrap -->
+  <path d="M 235 348 
+           L 364 148 
+           C 346 164 322 202 290 256 
+           L 242 338 
            Z" 
-        fill="url(#ribbonInnerGrad)" 
-        opacity="0.85"/>
+        fill="url(#vInnerGrad)"/>
 
-  <!-- 3. Right Sweeping Ribbon of V -->
-  <path d="M 234 402 
-           C 248 408, 268 402, 282 380 
-           L 380 162 
-           C 395 128, 412 102, 368 102 
-           C 345 102, 330 114, 314 135 
-           L 228 322 
-           C 214 352, 218 385, 234 402 
+  <!-- 3. Right Sweeping Ribbon -->
+  <path d="M 232 408 
+           C 248 415 270 408 284 384 
+           L 384 158 
+           C 398 122 416 96 370 96 
+           C 346 96 330 108 314 130 
+           L 226 328 
+           C 212 358 216 392 232 408 
            Z" 
-        fill="url(#rightRibbonGrad)"
-        filter="drop-shadow(0 6px 24px rgba(139,92,246,0.4))"/>
+        fill="url(#vRightGrad)"
+        filter="url(#intenseGlow)"/>
 
-  <!-- 4. Top Ribbon Crest / Twist Highlight -->
-  <path d="M 334 116 
-           C 348 104, 364 98, 388 100 
-           C 414 102, 412 124, 396 148 
-           C 378 174, 350 206, 320 254 
-           C 334 214, 348 178, 358 152 
-           C 366 130, 362 120, 348 120 
-           C 342 120, 338 122, 334 126 
+  <!-- 4. Top Ribbon Fold & Highlight Crest -->
+  <path d="M 330 112 
+           C 346 98 364 92 390 94 
+           C 418 96 416 120 398 146 
+           C 378 174 348 210 316 260 
+           C 332 216 348 176 360 148 
+           C 368 126 362 114 346 114 
+           C 340 114 335 116 330 120 
            Z" 
-        fill="url(#ribbonFoldGrad)"
-        opacity="0.95"
-        filter="drop-shadow(0 2px 8px rgba(216,180,254,0.5))"/>
-
+        fill="url(#vFoldGrad)"
+        opacity="0.98"/>
 </svg>

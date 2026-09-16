@@ -64,12 +64,13 @@ function Dashboard() {
 
                 <div className='relative w-full max-w-sm rounded-2xl border border-slate-200/70 bg-white/80 p-6 sm:p-8 text-center shadow-xl shadow-slate-200/50 backdrop-blur-xl dark:border-white/[0.08] dark:bg-white/[0.03] dark:shadow-black/40'>
 
-                    <div className='mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-lg shadow-black/5 dark:border-transparent'>
-                        <span className='text-lg font-bold text-slate-900'>AI</span>
+                    <div className='relative mx-auto mb-5 flex h-16 w-16 items-center justify-center'>
+                        <div className='absolute inset-0 rounded-2xl bg-gradient-to-tr from-cyan-500/20 via-indigo-500/30 to-purple-500/20 blur-lg animate-pulse' />
+                        <img src="/favicon.svg" alt="VertexAI Logo" className="relative h-16 w-16 drop-shadow-[0_4px_16px_rgba(99,102,241,0.4)]" />
                     </div>
 
-                    <h2 className='mb-2 text-xl font-bold text-slate-900 dark:text-white'>
-                        Welcome to VertexAI
+                    <h2 className='mb-2 text-2xl font-bold tracking-tight text-slate-900 dark:text-white'>
+                        Welcome to <span className="bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">VertexAI</span>
                     </h2>
 
                     <p className='mb-6 text-[13.5px] leading-relaxed text-slate-500 dark:text-slate-400'>

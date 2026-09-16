@@ -42,8 +42,11 @@ const handleLogout=async ()=>{
 
     return (
         <div className='w-full h-16 bg-white/70 dark:bg-white/[0.03] backdrop-blur-xl border-b border-slate-200/70 dark:border-white/[0.07] flex items-center px-6 gap-6 font-sans transition-colors duration-300'>
-            <div className='flex items-center gap-2.5 shrink-0'>
-                <img src="/favicon.svg" alt="VertexAI Logo" className="w-7 h-7 rounded-lg" />
+            <div className='group flex items-center gap-2.5 shrink-0 cursor-pointer select-none'>
+                <div className='relative'>
+                    <div className='absolute -inset-1 rounded-xl bg-gradient-to-r from-sky-500/20 to-purple-500/20 blur opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
+                    <img src="/favicon.svg" alt="VertexAI Logo" className="relative w-7 h-7 rounded-lg transition-transform duration-300 group-hover:scale-105" />
+                </div>
                 <span className='text-slate-900 dark:text-white font-bold text-[17px] tracking-tight'>
                     VertexAI
                 </span>
