@@ -9,8 +9,11 @@ function TopBar({showPreview,setShowPreview}) {
     return (
         <div className='relative flex h-12 items-center justify-between border-b border-white/[0.06] bg-[#111113]/90 px-4 backdrop-blur-xl'>
             <div className='flex items-center gap-3'>
-                <div className='text-white  text-lg font-bold text-transparent'>
-                    VertexAI
+                <div className='flex items-center gap-2.5'>
+                    <img src="/favicon.svg" alt="VertexAI" className="w-6 h-6 rounded-md" />
+                    <div className='text-white text-base font-bold tracking-tight'>
+                        VertexAI
+                    </div>
                 </div>
 
                 <div className='h-4 w-px bg-white/10' />
